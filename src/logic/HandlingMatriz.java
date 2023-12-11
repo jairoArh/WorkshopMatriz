@@ -153,16 +153,14 @@ public class HandlingMatriz {
         return null;
     }
 
-    public int[][] generateMagic(){
+    public void generateMagic(){
         if( matriz.length == matriz[0].length ){
             if( matriz.length % 2 == 0 ){
-                return magicPair();
+                magicPair();
             }
 
-            return magicOdd();
+            magicOdd();
         }
-
-        return null;
     }
 
     /**
@@ -185,6 +183,53 @@ public class HandlingMatriz {
         return null;
     }
 
+    /**
+     * Método que retorna los elementos que se encuentran por debajo de la diagonal principal
+     * @return Un vector con los elementos
+     * @throws Exception Se lanza cuando no es una matriz cuadrada (n x n)
+     * Responsable: PATINO ZAMBRANO BRAYAN ESNEIDER
+     */
+    public int[] getElementsBelow() throws Exception{
+
+        return null;
+    }
+
+    /**
+     * Método que retorna los elementos que se encuentran sobre la diagonal principal
+     * @return vector con los elementos
+     * @throws Exception Se lanza cuando no es una matriz cuadrada (n x n)
+     * Responsable: PÉREZ CASTAÑEDA ANDRÉS DAVID
+     */
+    public int[] getElementsOver( ) throws Exception{
+
+        return null;
+    }
+
+
+    /**
+     * Método que vertifica si una matriz es triangular superior.
+     * @return verdadero si es triangular o falso si no es
+     * @throws Exception Se lanza cuando no es una matriz cuadrada (n x n)
+     * Responsable: RICAURTE GARCÍA EIMY XIOMARA
+     * Una matriz es triangular cuando todas las entradas bajo la diagonal principal son iguales a cero
+     */
+    public boolean isTriangular()throws Exception{
+
+        return false;
+    }
+
+    /**
+     * Método que verifica si una matriz es diagonal
+     * @return true si la matriz es diagonal, o false si no es
+     * @throws Exception Se lanza cuando no es una matriz cuadrada (n x n)
+     * Responsable: SÁNCHEZ JAIME CAMILO ANDRÉS
+     * Una matriz cuadrada es diagonal si todos los elementos no diagonales son ceros
+     */
+    public boolean isDiagonal()throws Exception{
+
+        return false;
+
+    }
 
 
 }
