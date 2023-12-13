@@ -93,10 +93,15 @@ public class HandlingMatriz {
      * @throws Exception cuando el número de columna no es válido
      * Responsable: CUJABAN CORREDOR HERMAN ALEJANDRO
      */
-        public int sumCol ( int col ) throws Exception{
+    public int sumCol ( int col ) throws Exception{
         //TODO implementar el método
+        if( col >= 0 || col < matriz[0].length ){
+            //TODO Sumar columna
 
-        return 0;
+            return 0;
+        }
+
+        throw new Exception("Columna fuera de Rango");
     }
 
     /**
@@ -137,7 +142,15 @@ public class HandlingMatriz {
      */
     public int[][] getTranspuesta(){
 
-        return null;
+        int [][] matTrans = new int[matriz[0].length][matriz.length];
+
+        for( int i = 0 ; i < matriz.length ; i++ ){
+            for( int j = 0 ; j < matriz[0].length ; j++ ){
+                matTrans[j][i] = matriz[i][j];
+            }
+        }
+
+        return matTrans;
     }
 
     /**
@@ -159,6 +172,10 @@ public class HandlingMatriz {
     public int[][] invertMatriz(){
 
         return null;
+    }
+
+    public int[][] getMatriz() {
+        return matriz.clone();
     }
 
     public void generateMagic(int size ){

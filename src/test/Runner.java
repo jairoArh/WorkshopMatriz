@@ -1,6 +1,8 @@
 package test;
 
 import logic.HandlingMatriz;
+
+import java.util.Arrays;
 import java.util.Scanner;  // Asegúrate de importar la clase Scanner
 
 public class Runner {
@@ -45,12 +47,57 @@ public class Runner {
 
         System.out.println("+++++++++++MATRIZ MAGICA IMPAR+++++++++++");
         System.out.println( hm.showMatriz());
+
         try {
-            System.out.println(hm.sumRow(0));
-            System.out.println(hm.sumRow(1));
-            System.out.println(hm.sumRow(2));
+            if( hm.isMagic( ) ){
+                System.out.println("La Matriz es Mágica");
+            }else{
+                System.out.println("La Matriz no es Mággica");
+            }
+
+
+
+            System.out.println("++++++++SUMA DE FILAS++++++++++");
+            System.out.println( hm.showMatriz( ) );
+
+            for( int i = 0 ; i < hm.getMatriz().length ; i++ ){
+                System.out.printf("Fila[%d]=%d\n",i,hm.sumRow(i));
+            }
+
+            System.out.println("++++++++SUMA DE COLUMNAS++++++++++");
+
+            for( int j = 0 ; j < hm.getMatriz()[0].length ; j++ ){
+                System.out.printf("Columna[%d]=%d\n",j,hm.sumCol(j));
+                System.out.println("j vale " + j );
+            }
+
+            System.out.println("Diagonal Principal " + Arrays.toString( hm.getMainDiag()));
+            System.out.println("Diagonal Secundaris " + Arrays.toString( hm.getSecDiag()));
+
+            System.out.println("+++++TRANSPUESTA DE LA MATRIZ+++++++");
+            System.out.println("Original");
+            System.out.println(hm1.showMatriz());
+            HandlingMatriz handTrans = new HandlingMatriz( hm1.getTranspuesta( ) );
+            System.out.println( handTrans.showMatriz( ) );
+
+            System.out.println("++++++++++++++++MULTIPLICACION DE MATRICES+++++++++++++");
+            System.out.println( "++Matriz Uno++" );
+            System.out.println( hm.showMatriz());
+
+            System.out.println( "++Matriz Dos++" );
+            System.out.println( hm1.showMatriz());
+
+            System.out.println("++++Resultado+++++");
+
+            HandlingMatriz hmMult = new HandlingMatriz( hm.multMatriz( hm1.getMatriz()));
+
+            System.out.println( hmMult.showMatriz());
+
+
+
+
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
 
