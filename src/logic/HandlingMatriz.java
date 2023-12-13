@@ -1,6 +1,8 @@
 package logic;
 
 
+import java.util.Arrays;
+
 import java.util.Random;
 
 /**
@@ -161,7 +163,7 @@ public class HandlingMatriz {
             }
 
 
-            magicOdd();
+            magicOdd(0);
         }
 
     }
@@ -172,10 +174,51 @@ public class HandlingMatriz {
 
      * Responsable: MONGUI TORRES ANDRES FELIPE
      */
-    private int[][] magicOdd() {
+    public int[][] magicOdd(int size) {
+    	
+    	int[][] matrizood = new int[size][size];
+    	
+    	
+    	int numbervalue=1;
+    	int i=0,j=size/2;
+    	
+    	while(numbervalue<=size*size)	{
+    		 matrizood[i][j]=numbervalue;
+    		 int cambioi=i-1;
+    		 int cambioj=j+1;
+    		 
+    		 if(cambioi<0)	{
+    			 cambioi=matrizood.length-1;
+    		 }
+    		 if(cambioj>=size)	{
+    			 cambioj=0;
+    		 }
+    		 if(matrizood[cambioi][cambioj]!=0)	{
+    			 i=i+1;
+    			 if (i >= size) {
+    	                i = 0;
+    	            }
+    	        } else {
+    	            i = cambioi;
+    	            j = cambioj;
+    	        }
+    		 
+    		 numbervalue++;
+    	}
+    	
+    	/*
+    	 StringBuilder magicood = new StringBuilder();
+    	 
+    	 for( i = 0 ; i < matrizood.length ; i++ ){
+             for( j = 0 ; j < matrizood[i].length ; j++ ){
+                 magicood.append( matrizood[i][j] + "\t");
+             }
+             magicood.append("\n");
+         }
 
-        return null;
-
+       
+    	*/
+        return matrizood;
     }
 
     /**
