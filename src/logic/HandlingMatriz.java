@@ -72,11 +72,16 @@ public class HandlingMatriz {
      * Responsable: CARO SANCHEZ CESAR RICARDO
      */
 
-    public int sumRow ( int row ) throws Exception{
-        //TODO implementar el método
-
-        return 0;
+    public int sumRow(int row) throws Exception {
+    if (row < 0 || row >= matriz.length) {
+        throw new Exception("Invalid row number");
     }
+    int sum = 0;
+    for (int j = 0; j < matriz[row].length; j++) {
+        sum += matriz[row][j];
+    }
+    return sum;
+}
 
     /**
      * Método que calcula la suma de una COLUMNA
