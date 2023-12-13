@@ -41,19 +41,21 @@ public class Runner {
             System.out.println("Error " + e.getMessage());
         }
 
+        hm.generateMagic( 3 );
 
-        
-        
-        
+        System.out.println("+++++++++++MATRIZ MAGICA IMPAR+++++++++++");
+        System.out.println( hm.showMatriz());
+        try {
+            System.out.println(hm.sumRow(0));
+            System.out.println(hm.sumRow(1));
+            System.out.println(hm.sumRow(2));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+
         System.out.println("++++++++FIN DEL PROGRAMA++++++++");
-        
-        
-        
-        
-        
-        
 
-       
 
     }
 }

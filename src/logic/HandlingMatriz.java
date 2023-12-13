@@ -161,15 +161,14 @@ public class HandlingMatriz {
         return null;
     }
 
-    public void generateMagic(){
-        if( matriz.length == matriz[0].length ){
-            if( matriz.length % 2 == 0 ){
-                magicPair();
-            }
+    public void generateMagic(int size ){
 
-
-            magicOdd(0);
+        if( size % 2 == 0 ){
+            matriz = magicPair( size );
+        }else{
+            matriz = magicOdd( size );
         }
+
 
     }
 
@@ -231,7 +230,7 @@ public class HandlingMatriz {
      * @return elementos de la matriz mágica
      * Responsable: NAUSA ACOSTA LUIS ALEJANDRO
      */
-    private int[][] magicPair() {
+    private int[][] magicPair( int size ) {
 
         return null;
     }
