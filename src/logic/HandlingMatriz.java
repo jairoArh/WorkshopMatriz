@@ -174,7 +174,7 @@ public class HandlingMatriz {
 
      * Responsable: MONGUI TORRES ANDRES FELIPE
      */
-    public int[][] magicOdd(int size) {
+    private int[][] magicOdd(int size) {
     	
     	int[][] matrizood = new int[size][size];
     	
@@ -215,9 +215,9 @@ public class HandlingMatriz {
              }
              magicood.append("\n");
          }
-
+*/
        
-    	*/
+    	
         return matrizood;
     }
 
