@@ -109,8 +109,18 @@ public class HandlingMatriz {
      * @return arreglo de enteros con los elementos de la diagonal principal
      * Responsable: FIGUEREDO MOLANO MARIA CAMILA
      */
-    public int[ ] getMainDiag(){
-
+    public int[] getMainDiag(){
+        int[] mainDiag = new int[matriz.length];
+        if (matriz.length == matriz[0].length) {
+            for (int i = 0; i < matriz.length; i++){
+                for (int j = 0; j < matriz[i].length; j++) {
+                    if (i == j) {
+                        mainDiag[i] = matriz[i][j];
+                    }
+                }
+            }
+            return mainDiag;
+        }
         return null;
     }
 
