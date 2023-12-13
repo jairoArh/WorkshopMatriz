@@ -7,7 +7,7 @@ Proyecto para desarrollar algoritmos que manipulan matrices. Se desarrolla en gr
 | Método    | Responsable                       |
 |-----------|-----------------------------------|
 | isMagic() | ACERO MORALES SERGIO SANTIAGO     |
-| sumRow()  | CARO SÁNCEZ CESAR RICARDO         |
+| sumRow()  | CARO SÁNCHEZ CESAR RICARDO         |
 | sumCol()  | CUJABAN CORREDOR HERMAN ALEJANDRO |
 |getMainDiag()| FIGUEREDO MOLANO MARIA CAMILA     |
 |getSecDiag()| GALÁN ECHEVERRI JUAN ESTEBAN      |
